@@ -14,8 +14,9 @@ use Illuminate\Support\Str;
 use Laravel\Fortify\Fortify;
 use App\Http\Controllers\Admin\AdminController;
 use Illuminate\Contracts\Auth\StatefulGuard;
-use Laravel\Fortify\Actions\AttemptToAuthenticate;
-use Laravel\Fortify\Actions\RedirectIfTwoFactorAuthenticatable;
+use App\Actions\Fortify\AttemptToAuthenticate;
+use App\Actions\Fortify\RedirectIfTwoFactorAuthenticatable;
+use Auth;
 
 class FortifyServiceProvider extends ServiceProvider
 {
