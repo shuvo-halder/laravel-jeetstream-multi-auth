@@ -5,10 +5,16 @@
         </x-slot>
 
         <x-validation-errors class="mb-4" />
-
-        <form method="POST" action="{{ route('register') }}">
+        
+        <form method="POST" action="{{ isset($guard) ? url($guard.'register') : route('register') }}">
             @csrf
-
+            <div>
+                @if (isset($guard))
+                    <p class="text-center">{{ $guard.__(' register') }} </p>
+                @else
+                    <p class="text-center">{{ __('user register') }}</p>
+                @endif
+            </div>
             <div>
                 <x-label for="name" value="{{ __('Name') }}" />
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />

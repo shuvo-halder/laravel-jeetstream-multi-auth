@@ -47,6 +47,12 @@ class AdminController extends Controller
         ]);
     }
 
+    public function registerView(Request $request){
+        return view('auth.register',[
+            'guard' => 'admin',
+        ]);
+    }
+
     /**
      * Show the login view.
      *
