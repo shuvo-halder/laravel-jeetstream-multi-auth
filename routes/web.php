@@ -30,7 +30,7 @@ Route::middleware(['auth:sanctum,admin',config('jetstream.auth_session'),'verifi
     })->name('dashboard');
 });
 
-Route::middleware(['admin:admin'])->group(function(){
+Route::middleware(['admin'])->group(function(){
     Route::get('admin/login',[AdminController::class, 'loginview'])->name('admin.loginview');
     Route::post('admin/login',[AdminController::class, 'store'])->name('admin.login');
 });

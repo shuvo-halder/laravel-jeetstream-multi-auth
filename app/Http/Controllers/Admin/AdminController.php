@@ -41,6 +41,12 @@ class AdminController extends Controller
         $this->guard = $guard;
     }
 
+    public function loginview(Request $request){
+        return view('auth.login',[
+            'guard' => 'admin',
+        ]);
+    }
+
     /**
      * Show the login view.
      *
