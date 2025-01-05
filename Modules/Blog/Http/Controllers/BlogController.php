@@ -5,6 +5,7 @@ namespace Modules\Blog\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Models\Blog\Http\Request\BlogHandleRequest;
 
 class BlogController extends Controller
 {
@@ -31,7 +32,7 @@ class BlogController extends Controller
      * @param Request $request
      * @return Renderable
      */
-    public function store(Request $request)
+    public function store(BlogHandleRequest $request)
     {
         //
     }
