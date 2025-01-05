@@ -19,6 +19,13 @@ class BlogHandleRequest extends FormRequest
         ];
     }
 
+    public function messages(){
+        return [
+            'name.required'=>'name must need to this field',
+            'image.required'=>'image must upload in this inputed field',
+        ];
+    }
+
     /**
      * Determine if the user is authorized to make this request.
      *
